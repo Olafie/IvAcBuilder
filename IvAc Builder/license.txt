@@ -1,0 +1,27 @@
+IvAc Builder
+
+(c) 2017 Hervé Sors
+
+This version of IvAc Builder is distributed under a PUBLIC
+license. This means that the user of this product shall comply in all
+respects to the following Terms and Conditions:
+
+1. Usage and Distribution
+
+This software is released as freeware. As so, permission is granted to
+distribute it unchanged on any free media or network that does
+not have a per-file download charge. You are NOT ALLOWED to
+distribute, rent, lease or sublicense this program to other users.
+If you want to include it to your package or web site, just ask me
+
+2. Limitation of Warranty
+
+This software is provided "as-is" without any express or implied warranty.
+In no event shall the author be held liable for any direct, indirect,
+incidental, special, exemplary or consequential damages (including but not
+limited to loss of data or profits) arising from the use of this software,
+even if advised of the possibility of such damage.
+
+3. Copyright
+
+This software is Copyrighted by Hervé Sors, 2017

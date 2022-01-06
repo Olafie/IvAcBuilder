@@ -1,0 +1,350 @@
+IvAc Builder Revision history
+============================
+
+Version 6.61 (28-August-2019)
+-----------------------------
+Fix: Corrects tool windows not minimizing when main window is minimized
+Fix: Corrects a calculation bug of some trigonometric function
+
+Version 6.60 (27-November-2017)
+-------------------------------
+Fix: Corrects a small display bug in runway marks generator module 
+Fix: Corrects ICAO region code assignment of airport and runway records (databases)
+Changed: Airport search and selection
+Changed: Improved precision of some database records
+Changed: Improves several mathematical routines
+Changed: Auto-update procedure and settings
+Changed: Removes default mag var update when changed inside modules (default sector magvar can still be defined in Options form)
+Changed: Some other code improvement
+Added: Adds a simple runway labels option (rather than ICAO compliant polygons) for drawing runway designators
+
+Version 6.56 (unpublished)
+--------------------------
+Changed: Maximum runway designator caracters width increased to 12 m (not ICAO compliant)
+
+Version 6.55 (28-November-2017)
+-------------------------------
+Changed: More precise positioning of child windows according to OS and dwm composition 
+Added: ILS (alternate drawing) additional settings (ILS distance marks and ILS axe draw start distance)
+Added: ILS (alternate drawing) threshold coordinates search from provided runway database
+Changed: Some code improvement
+
+Version 6.51 (15-September-2017)
+--------------------------------
+Changed: Improved sort routines
+
+Version 6.50 (8-July-2017)
+--------------------------
+Added: Calculated magnetic variation (from tool) set as default value (Note: if any module using magvar value is already active, you'll have to reopen it)
+Added: Choice between true and mag values (using default mag var value) for all tools for which a track has to be entered 
+Added: ILS distance mark length now definable (from 0.01 to 0.20 nm, default is 0.10 nm)
+Added: status miles (sm) in conversion tool
+Changed: Max circle arc radius increased to 200 NM
+Changed: Tolerance limits of radius discrepancies for circle arc calculations from start/end points
+[Note: will be 2% if absolute discrepancy is above 0.5 nm]
+Changed: Line intersection tool routine (will use WGS calculation first and GC only in case of mathematical indetermination)
+Changed: Few other minor code improvements
+
+Version 6.47 (5-July-2017)
+--------------------------
+Fix: Bug entering negative (W) magnetic variation values in procedure turn module
+Changed: Procedure turn calculation display with associated tool (for radius selection/calculation)
+
+Version 6.46 (8-March-2017)
+---------------------------
+Added: Information and manual update
+
+Version 6.45 (7-March-2017)
+---------------------------
+Added: Google Earth placemark export
+
+Version 6.43 (4-September-2016)
+-------------------------------
+Changed: Minor changes (optimization)
+
+Version 6.42 (3-September-2016)
+-------------------------------
+Fix: Corrects a small display bug
+
+Version 6.41 (3-September-2016)
+-------------------------------
+Changed: Minor changes mainly regarding auto update capabilities
+
+Version 6.40 (30-August-2016)
+-----------------------------
+Changed: AIRAC data update process
+Changed: Radial and line intersection tools (providing now WGS-84 model results as default unless calculation is not possible)
+Changed: Installable and portable packages now include latest AIRAC database (updatable from within the program)
+Changed: Automatic AIRAC database version check and update removed (only manual update is now provided)
+
+Version 6.30 (7-August-2016)
+----------------------------
+Added: Google imported line strings and polygons can now be optionally represented as dashed lines
+NOTE: This may not give optimal results for very short lines; it could also be impossible for long lines with a small dash interval
+Added: Google Earth export module restore function
+Added: Runway stripes (Runway marks generator) 
+Added: Prevents portable version to be executed from a protected directory
+Changed: IvAc Builder AIRAC data moved to %ProgramData% IvAcBuilder folder (installable version) or IvAcBuilderCache subfolder (portable version)
+Changed: AIRAC data update simplified
+Changed: Dash interval limits in some modules
+Changed: Some additional minor changes
+
+Version 6.24 (7-July-2017)
+--------------------------
+Added: Runway centre lines (Runway marks generator)
+Fix: IvAc Restricted color label changed to Restrict
+
+Version 6.23 (4-July-2016)
+---------------------------
+Fix: Some drawing problems in dashed lines for Alternate ILS drawing module
+Changed: Increased precision for entering tracks in all modules
+Changed: Limits for hold autoradius calculation
+Added: Radial intersection tool
+
+Version 6.22 (9-June-2016)
+--------------------------
+Fix: Procedure turn calculation bug
+
+Version 6.21 (9-June-2016)
+--------------------------
+Fix: Navaid distance calculation failed on some conditions for holding draw calculations 
+Changed: Some changes and options in alternate ILS drawing module
+Added: Disabling program auto-update option
+
+Version 6.20 (8-June-2016)
+--------------------------
+Changed: Translation tool removed (never or very rarely used)
+Added: Alternate ILS drawing added
+Changed: Some additional minor changes
+
+Version 6.10 (5-May-2016)
+-------------------------
+Changed: Rounding some coordinates
+Changed: Airway extraction data process
+Added: Calculation tools
+Changed: Some additional minor changes
+
+Version 6.01 (2-May-2016)
+-------------------------
+Fix: Procedure turn calculation bug not providing any result
+Fix: Procedure turn radius maximum value not increased to 15 nm as stated
+Changed: AIRAC data selection window revised
+
+Version 6.00 (1-May-2016)
+-------------------------
+Added: Automatic program update in case a new version is available
+Changed: New AIRAC database management including automatic update
+Changed: Extraction of facilities (VOR, NDB, FIXES, RWY, AWY) module completely redesigned and recoded 
+Added: Add the possibility to directly enter coordinates in some modules from AIRAC database (VOR, NDB and FIXES)
+Changed: Valid data entered in some modules are now memorized and restored at next form startup
+Changed: Increased racetrack maximum leg distance to 20 NM
+Changed: Procedure turn radius maximum value increased to 15 nm
+Fix: Magnetic variation incorrectly taken into account in some modules
+Changed: Some other minor changes and improvements
+
+!!NOTE: Due to new AIRAC database structure versions before 6.00 will be unable to retrieve AIRAC facilities!! 
+
+Version 5.21 (21-March-2016)
+----------------------------
+Fixed: Minor bugs corrected
+
+Version 5.20 (5-March-2016)
+--------------------------
+Fixed: Corrects decimal separator incorrect retrieval on some locales (RTL languages)
+Changed: Improve coordinate precision of VOR/NDB extraction from AIRAC database 
+Changed: Some other minor changes and improvements
+
+Version 5.10 (15-Nov-2014)
+--------------------------
+Changed: NDGC geographic data extractor now only accepts GSHHG dat files (or equivalent clipboard content) - NDGC javascript tool is not anymore available from NOAA
+Fixed: Bug preventing proper conversion of GSHHG.dat files
+Added: Clearing cache of AIRAC database files so as to immediately enable reload of updated data (use sparingly, considering an automatic refresh is already performed every month)   
+
+Version 5.00 (final) (4-Oct-2014)
+---------------------------------
+Fixed: Ensure IvAc capture window remains on top while active
+Fixed: Clearing CB content didn't always work properly 
+Add: Load file to clipboard and Save clipboard to file functions
+
+Version 5.00b (26-Sep-2014)
+--------------------------
+This is a major update with a lot of new features and improvements
+Add: IvAc capture module with the possibility to sample IvAc coordinates from within a specific sampling module
+or from any other module for which coordinates have to be defined (via middle mouse button or a dedicated key (see options)
+Changed: Extraction of navdata (with conversion to IvAc format) now doesn't need anymore PMDG files and is performed via a network connection
+Changed: Greatly improve speed of clipboard operations for large contents
+Changed: improved Google Earth and NDGC acquisition
+Changed: Runway marks generator rewritten so as to comply with ICAO specifications for runway marking (note that all marks will be depicted as closed polygons)
+Changed: Improved memory management in some modules
+Changed: Menu layout
+Changed: Some other minor changes and improvements
+Add: Portable version in addition to installable version
+
+Considering the importance of changes performed, IvAc Builder 5.00 is by now provided as a beta version
+
+Version 4.32 (30-Apr-2014)
+--------------------------
+Fixed: many small remaining bugs
+
+Version 4.31 (13-Apr-2014)
+--------------------------
+Add: Now can import new GSHHG NOAA geographical data in addition of older NOAA data
+(courtesy of Mr Jehad Hamdan; see the following link for how to retrieve such data)
+http://www.aero.sors.fr/Documentation/Working_with_GSHHG_data.pdf
+Changed: Automatic detection of PMDG data when installed
+
+Version 4.30 (23-Oct-2013)
+--------------------------
+Fixed: arithmetic calculation bug on some systems while performing some calculations, raising a false line number error in PMDG extraction module
+Fixed: improper display of NDGC source data (no separation between lat and long)
+Fixed: missing message after NDGC dat file retrieval
+Changed: Automatically removes meaningless data (1 point) of NDGC source data (no more option)
+Add: Explicit waiting indication (hourglass) for long operations 
+Add: Explicit message on clipboard refresh
+Fixed: incorrect record count for PMDG Rwy/ILS extraction
+Changed: improved clipboard display and refresh speed
+Changed: improved memory management in some modules
+Changed: some other minor changes and improvements
+
+Version 4.20 (14-Oct-2013)
+--------------------------
+Add: Extraction of airway data from PMDG navdata files (Note that assignment to LOW or HIGH sections could be partly false and will need recheck)
+Add: Option to remove CB display leading tabs (usefull for a better lisibility of some xml Google Earth source code)
+Add: Horizontal scroll bar on CB display (needed for some outputs)
+Changed: Improved clipboard subclassing code
+Changed: Some small other minor changes
+
+Version 4.11 (10-0ct-2013)
+--------------------------
+Add: Extraction of runway data from PMDG navdata files
+Add: PMDG facility extraction by country code in addition to coordinate bounds
+Add: Comment/Description for Google extraction
+
+Version 4.10 (7-Oct-2013)
+-------------------------
+Changed: Improves string concatenation (with some improvement in calculation speed)
+Changed: Improves Google Earth extraction from latest version
+Add: Direct import of Google Earth kml files
+Changed: Message display timer
+Changed: Spaces accepted as IvAc coordinates separator in addition to dots
+Add: Clipboard auto refresh option
+Add: Calculation of racetrack outbound length from reference navaid radial in addition to distance 
+Changed: Numerous routine improvements and code cleaning
+
+Version 4.00 (30-Sep-2013)
+--------------------------
+Add: translation tool of selected IvAc figures
+Add: data extraction (airport, VOR, NDB, FIXES) from PMDG navdata files
+Add: X-Plane compatibility for simulator imported ground data
+Removed: Some calculation tools that are already available in other software (e.g. Adacalc)  
+Fixed: Some occasional crashs in complex calculations
+Changed: Numerous other cosmetic changes
+
+Version 3.52 (4-Sep-2013)
+-------------------------
+Change in configuration file name and location (previous settings will be kept)
+
+Version 3.51 (10-Sep-2012)
+--------------------------
+Minimum OS requirement (Windows XP or later)
+Default initialization path settings (Note IvAcBuilder.ini file is now always stored in the appropriate Users subfolder) 
+
+Version 3.50 (6-Jun-2012)
+-------------------------
+Changed: New visual interface font
+Changed: Removes 2005 magnetic variation calculation (only 2010 is now provided)
+New: Adds an option for improving IvAc dashed arcs/circles display while zooming out (ARTCC LOW/HIGH) (note that arc display will still disappear on high zoom levels)
+Changed: Color attribute management
+
+Version 3.43(1) (12-Mar-2011)
+--------------------------
+Fixed: NGDC geographic export format change
+Fixed: NGDC geographic coastline extractor link
+Fixed: Correctly save ini file in proper location according to program location & user account administrator rigths
+
+Version 3.42 (2-Oct-2010)
+-------------------------
+Fixed: Color attribute not properly applied in NGDC geographic export
+
+Version 3.41 (24-Aug-2010)
+--------------------------
+Fixed: Google earth import not working properly (coordinates error) with latest version of GE (5.2)
+
+Version 3.40 (24-May-2010)
+--------------------------
+Fixed: Automatic radius calculation (procedure turn) failed in some cases due to signed heading bug
+New: Adds a Navaid distance option for racetrack distance calculation 
+New: Adds a FS distance measurement tool (conversion & tools and runway marks generator)
+
+Version 3.31 (9-Mar-2010)
+-------------------------
+Fixed: Invalid year selector in Consions and Tools window
+
+Version 3.30 (9-Mar-2010)
+-------------------------
+New: Adds new 2010 magnetic model for magnetic variation calculation
+New: Adds some more caracters for labels
+Changed: Use IGRF-10/11 magnetic variation model instead of WMM
+Changed: Default magnetic variation management
+
+Version 3.20 (3-Jan-2010)
+-------------------------
+Changed: All numerical inputs are now left justified to avoid display problems when aero composition is active
+Fixed: Correctly displays windows on Vista and Windows 7 when aero composition is enabled 
+Fixed: Improves clipboard window synchronization
+Fixed: "OpenFile" function bug (non modal window)
+
+Version 3.10 (21-Nov-2009)
+--------------------------
+New: Adds dashed lines support to some output figures (with selectable dash intervals)
+New: Adds the possibility to save FS Lat/Long only (FS shape acquisition)
+New: Adds some new runway marks
+New: Adds a shape builder with many different figures
+New: Adds auto clipboard open/close option
+Changed: Improved line tool
+Changed: Colors are now selectable for each line of a FS shape
+Changed: Label orientation can now be defined precisely from 0 to 180°
+Changed: Improved turn mathematical routines (circle arc, procedure turn)
+Changed: Memorize magnetic variation data for a full session and from one session to another
+Changed: Some labels and tooltip texts
+Fixed: Correctly accepts South latitude coordinates
+Fixed: Corrects a bug in procedure turn automatic radius calculation (mathematical indetermination)
+Fixed: Correctly close clipboard window at program exit
+
+Version 3.03 (14-Nov-2009)
+--------------------------
+New: Adds some new automatically drawn runway marks
+New: Adds an "Auto hide menu" option so as to minimize screen use when working on several applications
+New: Adds some label options (circled letter, squared label)
+Deleted: Remind position option
+Changed: Clipboard window visibility
+Fixed: Correctly set color attribute to none (instead of IvAc predefined) in some cases
+
+Version 3.02 (9-Nov-2009)
+-------------------------
+New: Add the possibility to set initial label position and orientation from FS coordinates
+New: Add some more label caracters
+Changed: Label size can now be set to a defined height value (ft)
+Changed: Accepts more (simple) coordinate formats
+Changed: Group conversion tools and magnetic variation calculation in a single module
+Changed: Removed the [Undo] facility for clipboard view which appears useless
+Fixed: Mismatch data bug when switching modules in some cases
+Fixed: Wrong turn radius calculation and setting in holding (racetrack) drawing
+
+Version 3.01 (7-Nov-2009)
+-------------------------
+New: Add the possibility to directly retrieve FS coordinates when designing runway marks
+New: Add an automatic FS connection option
+New: Add some more customizable warning options
+Changed: Keeps FS acquired data even if connection to FS is lost
+Changed: Add more flexibility in label sizes
+Fixed: Correctly close FSUIPC when exiting FS shape builder
+Fixed: Correctly converts NGDC data when directly copied from an Internet source to clipboard
+
+Version 3.00 (6-Nov-2009)
+-------------------------
+Complete rewrite
+
+Hervé Sors
+hsors@hotmail.com
+http://www.aero.sors.fr
